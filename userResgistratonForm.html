@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+     <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="contact" method="post" enctype="multipart/form-data">
+            <h1>Registration Form</h1>
+            <h3>complete the form below and submit</h3>
+            <div class="row">
+                <div class="column">
+                    <fieldset>
+                        <input id="name" type="text" name="name" placeholder="FullName *" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input id="fatherName" type="text" name="fatherName" placeholder="FatherName *" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input id="email" type="email" name="email" placeholder="Email *" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input id="dob" type="text" name="dob" placeholder="Date Of Birth *" onfocus="(this.type = 'date')" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input id="mobile" type="text" name="mobile" placeholder="Mobile No *" required autofocus>
+                    </fieldset>
+                </div>
+                
+           
+                <div class="column">
+                    <fieldset>
+                        <label for="gender">Select your Geneder:</label>
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">M</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">F</label>
+                    </fieldset>
+                    <fieldset>
+                        <label for="idCard">Enter your ID Card in given format</label>
+                        <div class="idcard">
+                            <input type="text" name="idCard" pattern="[0-9]{5}" placeholder="#####" maxlength="5"> -
+                            <input type="text" name="idCard" pattern="[0-9]{7}" placeholder="#######" maxlength="7"> - 
+                            <input type="text" name="idCard" pattern="[0-9]{1}" placeholder="#" maxlength="1">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        
+                        <input type="file" id="file" required>
+                    </fieldset>
+                </div>
+            </div>
+            <fieldset>
+                <button type="submit" id="button">Submit Now</button>
+                <button type="reset" id="button">Reset</button>
+            </fieldset>
+        
+
+
+        </form>
+    </div>
+    <script>
+        var input = document.querySelector("#mobile");
+        window.intlTelInput(input, {
+         separateDialCode: true
+         });
+      </script>
+    
+    
+</body>
+</html>
